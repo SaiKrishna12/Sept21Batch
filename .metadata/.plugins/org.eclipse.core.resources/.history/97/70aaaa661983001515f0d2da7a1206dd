@@ -1,0 +1,17 @@
+package com.finext.customer.testsuite;
+
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+public class ZipCode extends Constants{
+	@Test
+	public void zipCodeTest()
+	{
+		FinextCxlogin FCxLogin = PageFactory.initElements(driver,FinextCxlogin.class);
+		FCxLogin.zipcode("12345");
+		UserMenu u_menu=PageFactory.initElements(driver,UserMenu.class);
+		u_menu.logout();
+		
+	}
+
+}

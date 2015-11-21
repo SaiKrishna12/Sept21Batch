@@ -1,0 +1,19 @@
+package com.finext.customer.testsuite;
+
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+public class ZipCode extends Constants{
+	@Test
+	public void zipCodeTest() throws InterruptedException
+	{
+		FinextCxlogin FCxLogin = PageFactory.initElements(driver,FinextCxlogin.class);
+		
+		UserMenu u_menu=PageFactory.initElements(driver,UserMenu.class);
+		u_menu.logout();
+		Thread.sleep(4000);
+		FCxLogin.zipcode("12345");
+		
+	}
+
+}

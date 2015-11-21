@@ -1,0 +1,19 @@
+package com.finext.customer.testsuite;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import com.finext.customer.utility.ExcelOperations;
+import com.finext.customer.utility.ScreenShots;
+
+
+
+public class Constants {
+	static WebDriver driver=null;
+	ExcelOperations eo=new ExcelOperations();
+	ScreenShots sc=new ScreenShots();
+	String path1="D:\\Chandu U\\WS\\FiNEXT_CUSTOMER\\src\\com\\finext\\customer\\excel\\CustomerData.xls";
+	String path2="C:\\Users\\sai\\Downloads\\WS\\WS\\FiNEXT_CUSTOMER\\src\\com\\finext\\customer\\dataengine\\DataEngine.xls";
+	String path3="D:\\Chandu U\\WS\\FiNEXT_CUSTOMER\\src\\com\\finext\\customer\\screenshots";
+
+}

@@ -1,0 +1,36 @@
+package com.finext.customer.testsuite;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class FinextCxlogin {
+	
+	@FindBy(id="Username")
+	WebElement uname;
+	@FindBy(id="Password")
+	WebElement pword;
+	@FindBy(linkText="LOGIN")
+	WebElement login;
+	
+	public void loginfunction(String u, String p)
+	{
+		uname.sendKeys(u);
+		pword.sendKeys(p);
+		login.click();
+	}
+	
+	@FindBy(linkText="Forgot Password?")
+	WebElement forgotPassword;
+	public void forgotpassword()
+	{
+		forgotPassword.click();
+	}
+	
+	@FindBy(id="txtZipcode")
+	WebElement zipcode;
+	public void zipcode()
+	{
+		zipcode.click();
+	}
+
+}

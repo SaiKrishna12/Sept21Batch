@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [OrangeHRM Suite]" parallel="tests">
+  <parameter name="browser" value="chrome"/>
+  <test name="Chrome(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.orangehrm.testsuite.TakingScreenshots">
+        <methods>
+          <include name="screenshotTest"/>
+        </methods>
+      </class> <!-- com.orangehrm.testsuite.TakingScreenshots -->
+    </classes>
+  </test> <!-- Chrome(failed) -->
+  <test name="Firefox(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.orangehrm.testsuite.Logout">
+        <methods>
+          <include name="logoutTest"/>
+        </methods>
+      </class> <!-- com.orangehrm.testsuite.Logout -->
+      <class name="com.orangehrm.testsuite.TakingScreenshots">
+        <methods>
+          <include name="screenshotTest"/>
+        </methods>
+      </class> <!-- com.orangehrm.testsuite.TakingScreenshots -->
+    </classes>
+  </test> <!-- Firefox(failed) -->
+</suite> <!-- Failed suite [OrangeHRM Suite] -->

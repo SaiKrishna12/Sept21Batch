@@ -1,0 +1,6 @@
+2015-11-07 21:46:51,580 INFO  [GmailLoginusingLog4j] Borwser launched 
+2015-11-07 21:46:56,013 INFO  [GmailLoginusingLog4j] Navigated to gmail 
+2015-11-07 21:46:57,834 INFO  [GmailLoginusingLog4j] Entered username 
+2015-11-07 21:46:58,132 INFO  [GmailLoginusingLog4j] Clicked on next 
+2015-11-07 21:46:59,344 INFO  [GmailLoginusingLog4j] Enterd password 
+2015-11-07 21:47:01,400 INFO  [GmailLoginusingLog4j] Clicked on sigin button 

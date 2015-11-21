@@ -1,0 +1,51 @@
+package com.finext.customer.testsuite;
+
+import org.apache.poi.ss.usermodel.Row;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.SkipException;
+
+public class ForgotPasswordPage {
+	
+	
+	
+	@FindBy(id="SSN")
+	WebElement ssnumber;
+	@FindBy (id="DOB")
+	WebElement birthdate;
+	@FindBy (linkText="Submit")
+	WebElement submit1;
+	@FindBy (linkText="Cancel")
+	WebElement pword;
+	
+	
+	public void forgotPWord(Row r) throws InterruptedException
+	{
+		Thread.sleep(5000);
+		ssnumber.clear();
+		ssnumber.sendKeys(r.getCell(0).getStringCellValue());
+		Thread.sleep(3000);
+		birthdate.clear();
+		birthdate.sendKeys(r.getCell(1).getStringCellValue());
+		Thread.sleep(2000);
+		submit1.click();
+		
+		try	{
+		Thread.sleep(6000);
+		pword.clear();
+		pword.sendKeys(r.getCell(2).getStringCellValue());
+		Thread.sleep(3000);
+		cnfpword.clear();
+		cnfpword.sendKeys(r.getCell(3).getStringCellValue());
+		submit2.click();
+		}
+		catch (Exception e)
+		{
+			throw new SkipException("SSN and DOB is not matching");
+			
+		}
+				
+	}
+}

@@ -1,0 +1,30 @@
+package com.finext.customer.testsuite;
+
+import java.io.IOException;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.SkipException;
+import org.testng.annotations.Test;
+
+public class LoginNew extends Constants{
+	@Test
+	public void loginTest() throws IOException
+	{
+		driver=new FirefoxDriver();
+		driver.get("http://162.218.104.193/web");
+		FinextCxlogin FCxLogin = PageFactory.initElements(driver,FinextCxlogin.class);
+		String runstatus=eo.getCellData(path2, 0, 1, 3);
+		if (runstatus.equals("No"))
+		{
+			throw new SkipException("Skipping Login Testcase");
+		}
+		else 
+		{
+			FCxLogin.loginfunction("frankcharles", "A123456a");
+		}	
+					
+		
+	}
+
+}

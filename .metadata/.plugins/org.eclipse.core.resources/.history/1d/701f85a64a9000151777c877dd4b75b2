@@ -1,0 +1,13 @@
+package com.orangehrm.testsuite;
+
+import java.io.IOException;
+
+import org.testng.annotations.Test;
+
+public class TakingScreenshots  extends Constants{
+	@Test
+	public void screenshotTest() throws IOException
+	{
+		sc.captureScreenshot(driver,"AddEmployee");
+	}
+}
